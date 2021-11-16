@@ -1,0 +1,7 @@
+com\tweet\util\Descricao.class
+com\tweet\controller\ProcuraController.class
+com\tweet\util\Entidades.class
+com\tweet\config\WebSocketConfig.class
+com\tweet\config\TwitterConfig.class
+com\tweet\controller\WebSocketEventoController.class
+com\tweet\Aplicacao.class

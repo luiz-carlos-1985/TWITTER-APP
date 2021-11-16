@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<title>Hello Twitter</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/paper/bootstrap.min.css"/>
+                <link rel="stylesheet" href="../static/main.css" type="text/css"/>
+                <link rel="stylesheet" href="../static/main.css" type="text/css"/>
+                <link rel="stylesheet" href="../static/main.css" type="text/css"/>
+                <link rel="stylesheet" href="../static/main.css" type="text/css"/>
+                <link rel="stylesheet" href="../static/main.css" type="text/css"/>
+                <link rel="stylesheet" href="../static/main.css" type="text/css"/>
+
+	</head>
+	
+	<body>
+
+	<div class="container-fluid">		
+
+	        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+	        	<div id="wrap">
+				  <form action="tweet" autocomplete="off" class="has-warning">
+				  <input id="search" name="search" type="text" placeholder="Procurar Twitter"></input>
+				  <input id="search_submit" value="Procurar" type="submit"></input>
+				  </form>
+				</div>
+	        	<div class="text-center">
+	        		<h2> 
+	        			<span class="text-warning">
+	        				Resultados da pesquisa para: 
+	        			</span> 
+	        			<u th:text="${search}" class="text-success"> keyWord </u> 
+                                        
+	        		</h2>
+	        	</div>
+	    		
+	    		<div class="table-responsive">
+					<table class="table table-striped table-condensed">
+					    <tr class="success">
+					    	<th>Sr. No</th>
+					        <th>Tweet</th>
+					        <th>Tweeted por</th>
+					        <th>De</th>
+					        <th>Tweetado em</th>
+					    </tr>
+					    <tr th:each="tweet,iterationstatus :${tweets}">
+					    	<td th:text="${iterationstatus.count}">1</td>
+					        <td th:text="${tweet.text}"> Tweet </td>	
+					        <td th:text="${tweet.user.name}"> Nome do usuário </td>
+					        <td th:text="${tweet.user.location}"> De </td>
+					        <td th:text="${tweet.createdAt}"> Tweetado em </td>
+					    </tr>
+					</table>
+				</div>
+	        </div>    
+	    
+	</div>
+	<footer>
+      <div class="row">
+        <div class="col-md-offset-1 col-lg-offset-1 col-md-10 col-lg-10">
+        </div>  
+      </div>
+    </footer>
+	</body>
+</html>
