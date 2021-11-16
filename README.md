@@ -1,5 +1,7 @@
 TWITTER-APP
 
+Realiza busca de palavra chave nos twittes com a necessidade de realizar acesso na API do twitter.
+
 Configuração do Twitter
 
 Faça login em https://apps.twitter.com e então crie um novo aplicativo e anote a chave do consumidor, segredo do consumidor, token de acesso e segredo do token de acesso. Edite o `/ src / main / resources / application.properties` e adicione as chaves fornecidas.
